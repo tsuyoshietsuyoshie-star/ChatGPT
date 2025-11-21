@@ -1,0 +1,32 @@
+{
+  "name": "chatgpt-desktop",
+  "version": "1.0.0",
+  "description": "Chat GPT and Pilot",
+  "main": "main.js",
+  "author": "Marcel",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.marcel.chatgpt",
+    "productName": "ChatGPT Desktop",
+    "win": {
+      "icon": "icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ChatGPT"
+    }
+  }
+}
